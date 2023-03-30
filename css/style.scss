@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+@import url('https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Roboto:wght@400;700&display=swap');
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 85rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.sec_space{
+    padding: 2rem 0;
+}
+
+.sec_heading{
+    padding: 0 1rem;
+    text-align: center;
+    h2{
+        font-weight: 700;
+        font-size: calc(1.5rem + .5vw);
+    }
+    p{
+        width: 75%;
+        margin: 0 auto;
+        padding: .5rem 0;
+        text-align: center;
+    }
+}
+.card_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+
+}
+
+.card{
+    flex: 33.333333%;
+    max-width: 33.333333%;
+    padding: 1rem;
+    overflow: hidden;
+    border-radius: .5rem;
+    
+    &:hover{
+        img{
+            transform: scale(1.1);
+        }
+    }
+    .card_img{
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        padding-top: 90%;
+        border-top-left-radius: .5rem;
+            border-top-right-radius: .5rem;
+        overflow: hidden;
+
+        img{
+            transition: all .7s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+    }
+
+    figcaption{
+        padding: .5rem 0;
+
+        h2{
+            font-weight: 700;
+            margin-bottom: .5rem;
+            
+        }
+
+        p{
+            text-align: justify;
+        }
+
+        
+    }
+
+
+}
+
+//media queries
+
+@media(max-width: 768px){
+
+    .card_wrapper{
+        justify-content: center;
+    }
+
+    .card{
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+
+@media(max-width: 576px){
+    .card{
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
